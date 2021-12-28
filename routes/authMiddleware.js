@@ -3,8 +3,7 @@ module.exports.isAuth = (req, res, next) => {
     next();
     // res.status(200).json({ user: req.user, auth: true });
   } else {
-    res.status(401).json({ auth: false });
-    next();
+    return res.status(401).json({ auth: false });
   }
 };
 
