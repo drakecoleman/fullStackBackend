@@ -10,7 +10,12 @@ const connection = require("./config/database");
 const http = require("http");
 const { Server } = require("socket.io");
 const cors = require("cors");
-app.use(cors({ origin: "http://localhost:3001", credentials: true }));
+app.use(
+  cors({
+    origin: ["http://localhost:3001", "https://frontendfullstack.netlify.app/"],
+    credentials: true,
+  })
+);
 
 const server = http.createServer(app);
 

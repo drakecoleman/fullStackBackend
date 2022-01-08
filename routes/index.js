@@ -8,7 +8,12 @@ const User = mongoose.models.User;
 const isAuth = require("./authMiddleware").isAuth;
 // cors is needed with router.use else you have to put routes on the app.js
 const cors = require("cors");
-router.use(cors({ origin: "http://localhost:3001", credentials: true }));
+router.use(
+  cors({
+    origin: ["http://localhost:3001", "https://frontendfullstack.netlify.app/"],
+    credentials: true,
+  })
+);
 // const isAdmin = require("./authMiddleware").isAdmin;
 router.use(bodyParser.urlencoded({ extended: false }));
 
