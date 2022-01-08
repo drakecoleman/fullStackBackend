@@ -9,6 +9,9 @@ const isAuth = require("./routes/authMiddleware").isAuth;
 const connection = require("./config/database");
 const http = require("http");
 const { Server } = require("socket.io");
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+});
 const cors = require("cors");
 app.use(
   cors({
