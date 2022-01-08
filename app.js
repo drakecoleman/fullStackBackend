@@ -12,7 +12,7 @@ const { Server } = require("socket.io");
 const cors = require("cors");
 app.use(
   cors({
-    origin: ["http://localhost:3001", "https://frontendfullstack.netlify.app/"],
+    origin: ["http://localhost:3001", "https://frontendfullstack.netlify.app"],
     credentials: true,
   })
 );
