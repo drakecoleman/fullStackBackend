@@ -9,9 +9,9 @@ const isAuth = require("./routes/authMiddleware").isAuth;
 const connection = require("./config/database");
 const http = require("http");
 const { Server } = require("socket.io");
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-});
+// app.use((req, res, next) => {
+//   res.header("Access-Control-Allow-Origin", "*");
+// });
 const cors = require("cors");
 app.use(
   cors({
@@ -19,6 +19,7 @@ app.use(
       "http://2607:fb90:b6e0:a363:f89f:be4b:a976:9ed0:3001",
       "https://frontendfullstack.netlify.app",
       "http://localhost:3001",
+      "localhost:3001",
     ],
     credentials: true,
   })
