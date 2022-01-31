@@ -141,7 +141,7 @@ router.get("/", isAuth, (req, res) => {
     .then((response) => {
       res.status(200).json({ user: req.user, auth: true, response });
     })
-    .catch((err) => console.log(err));
+    .catch((err) => console.log(err, "Here"));
 });
 
 module.exports = router;
