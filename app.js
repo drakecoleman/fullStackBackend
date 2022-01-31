@@ -15,7 +15,10 @@ app.use((req, res, next) => {
 const cors = require("cors");
 app.use(
   cors({
-    origin: ["http://localhost:3001", "https://frontendfullstack.netlify.app"],
+    origin: [
+      "http://2607:fb90:b6e0:a363:f89f:be4b:a976:9ed0:3001",
+      "https://frontendfullstack.netlify.app",
+    ],
     credentials: true,
   })
 );
