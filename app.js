@@ -22,6 +22,7 @@ app.use(
       "localhost:3001",
     ],
     credentials: true,
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   })
 );
 
