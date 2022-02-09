@@ -114,7 +114,7 @@ const bodyParser = require("body-parser");
 
 const MongoStore = require("connect-mongo")(session);
 
-require("dotenv").config({ path: `.env` });
+// require("dotenv").config({ path: `.env` });
 
 app.use(express.json());
 // app.use(bodyParser.urlencoded({ extended: false }));

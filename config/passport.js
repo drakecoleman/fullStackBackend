@@ -5,7 +5,18 @@ const mongoose = require("mongoose");
 const User = mongoose.models.User;
 const validPassword = require("../lib/passwordUtils").validPassword;
 const cors = require("cors");
-passport.use(cors({ origin: "http://localhost:3001" }));
+passport.use(
+  cors({
+    origin: [
+      "http://2607:fb90:b6e0:a363:f89f:be4b:a976:9ed0:3001",
+      "https://frontendfullstack.netlify.app",
+      "http://localhost:3001",
+      "localhost:3001",
+    ],
+    credentials: true,
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  })
+);
 
 const customFields = {
   usernameField: "username",
