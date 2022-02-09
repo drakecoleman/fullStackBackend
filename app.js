@@ -30,8 +30,14 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3001",
-    methods: ["GET", "POST", "PUT"],
+    origin: [
+      "http://2607:fb90:b6e0:a363:f89f:be4b:a976:9ed0:3001",
+      "https://frontendfullstack.netlify.app",
+      "http://localhost:3001",
+      "localhost:3001",
+    ],
+    credentials: true,
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   },
 });
 
