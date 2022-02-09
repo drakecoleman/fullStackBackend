@@ -6,7 +6,7 @@ require("dotenv").config({ path: `.env` });
 // const conn = process.env.DB_STRING;
 
 const connection = mongoose.connect(
-  "mongodb+srv://${process.env.DB_User}:${process.env.DB_Pass}@cluster0.tp1sb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "mongodb+srv://${process.env.DB_User}:${process.env.DB_Pass}@cluster0.tp1sb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority&authSource=admin",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
