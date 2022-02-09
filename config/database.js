@@ -5,11 +5,15 @@ require("dotenv").config({ path: `.env` });
 
 // const conn = process.env.DB_STRING;
 
-const connection = mongoose.connect(process.env.DB_STRING, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-});
+const connection = mongoose.connect(
+  "mongodb+srv://${process.env.DB_User}:${process.env.DB_Pass}@cluster0.tp1sb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  }
+);
+//process.env.DB_STRING
 
 const UserSchema = new mongoose.Schema({
   username: String,
