@@ -10,6 +10,7 @@ passport.use(
     origin: [
       "http://2607:fb90:b6e0:a363:f89f:be4b:a976:9ed0:3001",
       "https://fullfrontend.herokuapp.com/",
+      "http://fullfrontend.herokuapp.com/",
       "http://localhost:3001",
       "localhost:3001",
     ],
