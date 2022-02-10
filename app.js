@@ -32,7 +32,7 @@ const io = new Server(server, {
   cors: {
     origin: [
       "http://2607:fb90:b6e0:a363:f89f:be4b:a976:9ed0:3001",
-      "https://frontendfullstack.netlify.app",
+      "https://fullfrontend.herokuapp.com/",
       "http://localhost:3001",
       "localhost:3001",
     ],
@@ -129,7 +129,7 @@ const sessionStore = new MongoStore({
 app.use(
   session({
     secret: "zdfbdaf",
-    resave: true,
+    resave: false,
     saveUninitialized: true,
     store: sessionStore,
     cookie: {
