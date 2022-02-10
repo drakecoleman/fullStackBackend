@@ -133,7 +133,7 @@ app.use(
     saveUninitialized: true,
     store: sessionStore,
     cookie: {
-      cookie: { secure: false },
+      cookie: { secure: true },
       maxAge: 1000 * 60 * 60 * 24,
     },
   })
