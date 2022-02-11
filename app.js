@@ -128,13 +128,10 @@ const sessionStore = new MongoStore({
   mongooseConnection: mongoose.connection,
   collection: "sessions",
 });
-app.set("trust proxy", 1);
 
 app.use(
   session({
     secret: "zdfbdaf",
-    proxy: true,
-    secureProxy: true,
     resave: false,
     saveUninitialized: false,
     store: sessionStore,
