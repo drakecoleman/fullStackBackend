@@ -132,6 +132,7 @@ const sessionStore = new MongoStore({
 app.use(
   session({
     secret: "zdfbdaf",
+    proxy: true,
     secureProxy: true,
     resave: false,
     saveUninitialized: true,
